@@ -1,10 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "This is it")
-  ]);
+class App extends React.Component {
+  state = { that: 'Hello World!' }
+
+  render() {
+    return (
+      <div>
+        <span>{this.state.that}</span>
+      </div>
+    )
+  }
+
 };
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
